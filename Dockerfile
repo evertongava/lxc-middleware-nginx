@@ -10,6 +10,8 @@ RUN set -ex \
 WORKDIR /srv/www
 
 COPY assets/etc/nginx.conf /etc/nginx/nginx.conf
+COPY assets/etc/http.d /etc/nginx/http.d
+COPY assets/html/index.html /srv/www/index.html
 COPY assets/start.sh /usr/bin/start.sh
 
 RUN chown -R app:adm \
